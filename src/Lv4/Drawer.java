@@ -35,15 +35,9 @@ class Drawer {
                 //圆的下半部分遍历，这个循环遍历行
                 for (int k = 0; k < size; k++) {
                     //第三象限部分
-                    if (k < initialData.length) {
-                        temp[i][k] = temp[i + (R - i) * 2][k];
-                    } else {
-                        /*
-                        //第四象限部分
-                        temp[i][k] = initialData[(R-1)-k][k-R];
-                           */
-                    }
+                    temp[i][k] = temp[i + (R - i) * 2][k];
                 }
+
             } else {
                 //这个循环遍历一个行中的列元素，一个元素为单位,共2r个元素
                 for (int j = 0; j < size; j++) {

@@ -5,7 +5,7 @@ public class Calculator {
     double x;
     short[][] data;
 
-    Calculator(int R){
+    Calculator(int R) {
         this.R = R;
         data = new short[R][R];
     }
@@ -16,14 +16,14 @@ public class Calculator {
      * y是图形中真实的y值，x是计算得来的真实的x值
      * n是列遍历变量，从0遍历到24，从左到右。和x类似
      */
-    short[][] CalculateCircle(){
+    short[][] CalculateCircle() {
         for (int m = R - 1; m >= 0; m--) {
             y = m + 1;
-            x = Math.sqrt(((R*R) - (y*y)));
+            x = Math.sqrt(((R * R) - (y * y)));
 
             for (int n = 0; n < R; n++) {
                 //Math.round四舍五入
-                if(n == Math.round((int)x)){
+                if (n == Math.round((int) x)) {
                     data[m][n] = 1;
                 }
                 //System.out.print(String.valueOf(data[m][n]));

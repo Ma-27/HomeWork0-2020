@@ -30,12 +30,14 @@ class Drawer {
             /*外循环分为上下两节，这个上面的1/2圆
             判断上面的半个圆循环完了没有，完了就循环下一个
              */
+
+
             if (i < initialData.length) {
 
                 //圆的下半部分遍历，这个循环遍历行
                 for (int k = 0; k < size; k++) {
                     //第三象限部分
-                    temp[i][k] = temp[i + (R - i) * 2][k];
+                    temp[i][k] = temp[49-i][k];
                 }
 
             } else {

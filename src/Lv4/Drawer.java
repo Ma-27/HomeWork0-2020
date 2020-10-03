@@ -37,7 +37,7 @@ class Drawer {
                 //圆的下半部分遍历，这个循环遍历行
                 for (int k = 0; k < size; k++) {
                     //第三象限部分
-                    temp[i][k] = temp[49-i][k];
+                    temp[i][k] = temp[2 * R - 1 - i][k];
                 }
 
             } else {
@@ -61,18 +61,35 @@ class Drawer {
     /**
      * 将0 和1 数据转化成图形
      *
-     * @param data
+     * @param data 传入一个要打印的数组
      */
     private void DrawArray(short[][] data) {
         for (int m = data.length - 1; m >= 0; m--) {
-            for (int n = 0; n < data.length; n++) {
-                if (data[m][n] == 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print("  ");
+            if (m == data.length / 2) {
+                //这个循环使中间一整行都打印*
+                for (int n = 0; n < data.length; n++) {
+                    System.out.print(" *");
                 }
+            } else {
+                //正常打印圆形
+                for (int n = 0; n < data.length; n++) {
+                    if (data[m][n] == 1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print("  ");
+                    }
+
+                    //这个循环打印列中的那个横线
+
+                    if (n == (data.length - 1) / 2) {
+                        System.out.print("*");
+                    }
+
+
+                }
+                System.out.println();
             }
-            System.out.println();
+
         }
     }
 }

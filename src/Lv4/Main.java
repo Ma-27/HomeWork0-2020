@@ -1,16 +1,15 @@
 package Lv4;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        final int r = 25;
+        //可以控制打印圆的半径
+        final int r = 12;
         short[][] data;
 
         Calculator calculator = new Calculator(r);
-        data  = calculator.CalculateCircle();
+        data = calculator.CalculateCircle();
 
-        Drawer drawer = new Drawer(r,data);
+        Drawer drawer = new Drawer(r, data);
         drawer.DrawFunction();
     }
 }

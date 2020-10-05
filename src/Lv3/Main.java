@@ -12,21 +12,21 @@ public class Main {
                 {{3, 8}, {5, 9}, {2, 17}, {45, 8}, {13, 7}, {99, 14}, {175, 16}, {151, 99999}};
 
         MergeOrder mergeOrder = new MergeOrder(ZZjj, TQjj);
-        AllOrders = mergeOrder.Merge();
+        AllOrders = mergeOrder.merge();
         //打印合并后的数据
         //printOrder(AllOrders);
 
         Sort sort = new Sort(AllOrders);
-        FormedOrders = sort.SortPrice();
+        FormedOrders = sort.sortPrice();
         printOrder(FormedOrders);
     }
 
     static void printOrder(int[][] Orders) {
-        System.out.println("打印" + Orders);
+        System.out.println("打印出的结果为：");
 
-        for (int i = 0; i < Orders.length; i++) {
-            for (int j = 0; j < Orders[i].length; j++) {
-                System.out.printf(String.valueOf(Orders[i][j]));
+        for (int[] order : Orders) {
+            for (int j = 0; j < order.length; j++) {
+                System.out.printf(String.valueOf(order[j]));
 
                 //输出要求的格式
                 if (j == 0) {

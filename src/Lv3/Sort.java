@@ -8,7 +8,7 @@ public class Sort {
         this.allOrders = allOrders;
     }
 
-    int[][] SortPrice() {
+    int[][] sortPrice() {
         for (int i = 0; i < allOrders.length - 1; i++) {
 
             for (int j = i + 1; j < allOrders.length; j++) {
